@@ -1,0 +1,15 @@
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.csproj.AssemblyReference.cache
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.AssemblyInfoInputs.cache
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.AssemblyInfo.cs
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.csproj.CoreCompileInputs.cache
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\bin\Debug\net6.0\GameDevI.exe
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\bin\Debug\net6.0\GameDevI.deps.json
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\bin\Debug\net6.0\GameDevI.runtimeconfig.json
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\bin\Debug\net6.0\GameDevI.dll
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\bin\Debug\net6.0\GameDevI.pdb
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.dll
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\refint\GameDevI.dll
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.pdb
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\GameDevI.genruntimeconfig.cache
+C:\Users\Brand\Coding Dojo\CSharp\GameDevI\obj\Debug\net6.0\ref\GameDevI.dll
