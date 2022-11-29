@@ -1,16 +1,16 @@
 
- class Vehicle
+abstract class Vehicle
 {
-    string Name;
-    int Passengers;
+   public string Name;
+    public int Passengers;
 
-    string Color;
+    public string Color;
 
-    bool HasEngine;
+    public bool HasEngine;
 
-    int TopSpeed;
+    public int TopSpeed;
 
-    int NumMiles;
+    public int NumMiles;
 
     public Vehicle(string name, int passengers, string color, bool hasEngine, int topSpeed, int numMiles)
     {
@@ -27,12 +27,12 @@
         NumMiles = numMiles;
     }
 
-    public void ShowInfo()
+    public virtual void ShowInfo()
     {
         Console.WriteLine($"Name:{Name} - Passengers:{Passengers} Color: {Color} Engine: {HasEngine} Top Speed: {TopSpeed} Total Miles: {NumMiles}");
     }
 
-    public void Travel(int miles)
+    public virtual void Travel(int miles)
     {
         NumMiles += miles;
         Console.WriteLine($"Number of Miles: {NumMiles}");

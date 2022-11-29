@@ -1,17 +1,29 @@
-﻿
-Vehicle Car = new Vehicle("Shaq", 5, "blue", true, 140, 180000);
-Vehicle CarTwo = new Vehicle("Shaq", 5, "red", true, 140, 180000);
-Vehicle CarThree = new Vehicle("Shaq", 5, "yellow", true, 140, 180000);
-Vehicle CarFour = new Vehicle("Shaq", 5, "green", true, 140, 180000);
+﻿Car newCar = new Car("gas", 10);
+Horse newHorse = new Horse("hay", 3);
+Bicycle newBicycle = new Bicycle();
 
 List <Vehicle> allVehicles = new List<Vehicle>();
+List <INeedFuel> allINeedFuels = new List<INeedFuel>();
 
-allVehicles.Add(Car);
-allVehicles.Add(CarTwo);
-allVehicles.Add(CarThree);
-allVehicles.Add(CarFour);
+allVehicles.Add(newCar);
+allVehicles.Add(newHorse);
+allVehicles.Add(newBicycle);
 
-foreach(Vehicle car in allVehicles)
+// allINeedFuels.Add(newCar);
+// allINeedFuels.Add(newHorse);
+
+foreach(var vehicle in allVehicles)
 {
-    car.ShowInfo();
+    vehicle.ShowInfo();
+    // Console.WriteLine(vehicle is INeedFuel);
+    if(vehicle is INeedFuel)
+    {
+        
+        allINeedFuels.Add((INeedFuel)vehicle);
+    }
+}
+
+foreach(INeedFuel vehicle in allINeedFuels)
+{
+    vehicle.GiveFuel(10);
 }
