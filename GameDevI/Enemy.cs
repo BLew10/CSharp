@@ -1,23 +1,19 @@
-class Enemy 
+public class Enemy 
 {
-    string Name;
+    public string Name;
 
-    private int Health;
-    public int _Health
+    public int Health;
+
+    public List<Attack> Attacks;
+
+    public Enemy(string name, int health, List<Attack> attacks)
     {
-        get{ return Health;}
-    }
-
-    List<Attack> Attacks;
-
-    public Enemy(string name, List<Attack> attacks)
-    {
-        Health = 100;
+        Health = health;
         Name = name;
         Attacks = attacks;
     }
 
-    public void RandomAttack()
+    public virtual void RandomAttack()
     {
         Random rand = new Random();
         Console.WriteLine(Attacks[rand.Next(0,Attacks.Count)].Name);

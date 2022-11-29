@@ -40,12 +40,63 @@ class SinglyLinkedList {
         /** @type {ListNode|null} */
         this.head = null;
     }
-    //           if(!this.head){
-    // if(!this.head){
-    //     return true
-    // } else {
-    //     return false
-    // }
+    /**
+ * Creates a new node with the given data and inserts that node at the front
+ * of this list.
+ * - Time: (?).
+ * - Space: (?).
+ * @param {any} data The data for the new node.
+ * @returns {SinglyLinkedList} This list.
+*/
+insertAtFront(data) {
+    if(this.isEmpty()){
+        this.head = new ListNode(data)
+        return this
+    }
+    let newHead = new ListNode(data);
+    newHead.next = this.head;
+    this.head = newHead;
+    return this
+}
+
+
+    /**
+     * Removes the first node of this list.
+     * - Time: (?).
+     * - Space: (?).
+     * @returns {any} The data from the removed node.
+    */
+     removeHead() {
+        if(this.isEmpty()){
+            return null
+        }
+        let prevHead = this.head;
+        this.head = prevHead.next;
+        return prevHead.data;
+    }
+
+    // EXTRA
+    /**
+     * Calculates the average of this list.
+     * - Time: (?).
+     * - Space: (?).
+     * @returns {number|NaN} The average of the node's data.
+    */
+     average() {
+        if(this.isEmpty()){
+            return NaN;
+        }
+        let runner = this.head;
+        let sum = 0;
+        let count = 0;
+        while(runner){
+            sum += runner.data;
+            runner = runner.next;
+            count++;
+        }
+        return sum / count;
+    }
+
     /**
      * Determines if this list is empty.
      * - Time: O(?).
@@ -53,19 +104,10 @@ class SinglyLinkedList {
      * @returns {boolean}
     */
     isEmpty() {
-        if (!this.head) {
-            return true
-        } else {
-            return false
-        }
-
+        return this.head === null
     }
 
-    // let runner = this.head
-    // while (runner){
-    //     runner = runner.next
-    // }
-    // runner.next = data
+
     /**
      * Creates a new node with the given data and inserts it at the back of
      * this list.
@@ -102,8 +144,8 @@ class SinglyLinkedList {
             this.head = new ListNode(data)
             return this
         }
-        if (!runner) {
-            runner =  new ListNode(data)
+        if (!runner.next) {
+            runner.next = new ListNode(data)
             return this
         }
 
@@ -148,12 +190,13 @@ Below commented code depends on insertAtBack method to be completed,
 after completing it, uncomment the code.
 */
 const emptyList = new SinglyLinkedList();
-console.log(emptyList.isEmpty())
 
 // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-const biNodeList = new SinglyLinkedList().insertAtBackRecursive([1, 2]);
+const biNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+console.log(biNodeList.average())
+console.log(biNodeList.insertAtFront(5))
+console.log(biNodeList.removeHead())
 
-console.log(biNodeList)
 // const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
 // const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 // const unorderedList = new SinglyLinkedList().insertAtBackMany([
