@@ -24,10 +24,10 @@ foreach(int i in MoreNumbers)
 List<int> EvenMoreNumbers = new List<int> {3,6,9,12,14};
 foreach(int num in EvenMoreNumbers)
 {
-    if(num % 3 == 0)
-    {
-        num = 0;
-    }
+    // if(num % 3 == 0)
+    // {
+    //     num = 0;
+    // }
 }
 // Challenge 5
 // What can we learn from this error message?: strings are immutable
