@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "QWjMObXywFMQa9XZwfxUx0vMBOZLzTslHRaLtBRsGFM=",
+  "Hash": "QJTwZt3B7DXKPbYALfgQnKTX3I0G698sUapLyjqOP28=",
   "Source": "ExampleProject",
   "BasePath": "_content/ExampleProject",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ExampleProject\\wwwroot",
+      "Source": "ExampleProject",
+      "ContentRoot": "C:\\Users\\Brand\\Coding Dojo\\CSharp\\ASPdotNETCore\\ExampleProject\\wwwroot\\",
+      "BasePath": "_content/ExampleProject",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Brand\\Coding Dojo\\CSharp\\ASPdotNETCore\\ExampleProject\\wwwroot\\css\\style.css",
+      "SourceId": "ExampleProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Brand\\Coding Dojo\\CSharp\\ASPdotNETCore\\ExampleProject\\wwwroot\\",
+      "BasePath": "_content/ExampleProject",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
 }

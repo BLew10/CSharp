@@ -21,3 +21,4 @@ C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\ExampleProject\obj\Debug\net6.0\
 C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\ExampleProject\obj\Debug\net6.0\ref\ExampleProject.dll
 C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\ExampleProject\obj\Debug\net6.0\ExampleProject.RazorAssemblyInfo.cache
 C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\ExampleProject\obj\Debug\net6.0\ExampleProject.RazorAssemblyInfo.cs
+C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\ExampleProject\bin\Debug\net6.0\ExampleProject.staticwebassets.runtime.json

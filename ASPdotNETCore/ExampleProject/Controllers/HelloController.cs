@@ -7,15 +7,17 @@ public class HelloController : Controller   // Remember inheritance?
     [HttpGet] // We will go over this in more detail on the next page    
     [Route("")] // We will go over this in more detail on the next page
     public ViewResult Index()        
-    {            
-    	return View();        
+    {           
+        ViewBag.Name = "Kylie"; 
+    	return View("Index");        
     }    
 
     [HttpGet("greet/{name}")]
 
-    public string Greet(string name)
+    public ViewResult Greet(string name)
     {
-        return $"Hello {name}";
+        ViewBag.Name = "Brandon";
+        return View("New");
     }
 }
 

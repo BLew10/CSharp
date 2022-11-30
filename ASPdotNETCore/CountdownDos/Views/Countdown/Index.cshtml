@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Index</title>
+    <!-- In this context '~' refers to the wwwroot folder  -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+
+<body>
+    <!-- code removed for brevity  -->
+
+    <body>
+
+        <div class="flex w-3/4 justify-between mx-auto">
+            <div>
+                <p>Start Time</p>
+                <p>@ViewBag.Date</p>
+            </div>
+            <div>
+                <p>End Time</p>
+                <p>@ViewBag.Christmas</p>
+            </div>
+        </div>
+        <div>
+            <p>Time Remaining</p>
+            <div>
+                <p>@ViewBag.DaysDifference Day(s)</p>
+                <p>@ViewBag.HoursDifference Hour(s)</p>
+                <p>@ViewBag.MinutesDifference Minute(s)</p>
+            </div>
+        </div>
+
+        @* <img src="~/images/myimage.jpg" alt="my cool image"/> *@
+    </body>
+
+</body>
+
+</html>
