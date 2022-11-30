@@ -9,6 +9,7 @@
             <span asp-validation-for="Name"></span>
             <label asp-for="Name">Name: </label><input type="text" asp-for="Name" class="border-2 w-1/2 border-black">
         </div>
+
         <div>
             <span asp-validation-for="Location"></span>
             <label asp-for="Location">Location: </label>
@@ -17,6 +18,7 @@
                 <option value="Remote">Remote</option>
             </select>
         </div>
+
         <div>
             <span asp-validation-for="FavLang"></span>
             <label asp-for="FavLang">Favorite Language</label><select asp-for="FavLang"
@@ -26,10 +28,11 @@
                 <option value="Python">Python</option>
             </select>
         </div>
+
         <div>
             <span asp-validation-for="Comment"></span>
             <label asp-for="Comment">Comment (optional): </label>
-            <textarea asp-for="Comment" id="" cols="50" rows="5" class="border-2 border-black"></textarea>
+            <textarea asp-for="Comment" cols="50" rows="5" class="border-2 border-black"></textarea>
         </div>
         <button class="p-3 border-2 w-1/2 border-black rounded">Submit</button>
     </form>

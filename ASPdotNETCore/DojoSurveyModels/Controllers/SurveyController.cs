@@ -13,6 +13,8 @@ public class SurveyController : Controller
         _logger = logger;
     }
 
+    public static User user;
+
 [HttpGet("")]
     public IActionResult Form()
     {
@@ -20,22 +22,21 @@ public class SurveyController : Controller
     }
 
 [HttpGet("/result")]
-    public IActionResult Result(User user)
+    public IActionResult Result()
     {
-        // Dictionary<string, string> UserInfo = new Dictionary<string,string>{{"Name", Name}, {"Location", Location}, {"Favorite Language", FavLang}, {"Comment", Comment}};
-        Console.WriteLine(user);
-
         return View(user);
     }
 
 
     [HttpPost("/user/create")]
-    public IActionResult Create(User user)
+    public IActionResult Create(User NewUser)
     {
 
         if(ModelState.IsValid)
         {
-            return View("Result", user);
+            user = NewUser;
+        
+            return RedirectToAction("Result");
         }
         else
         {
