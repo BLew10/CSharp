@@ -13,15 +13,32 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    [HttpGet("")]
+    public IActionResult Message()
     {
-        return View();
+        string message = "Hello, I hope this works";
+        return View("Message",message);
     }
 
-    public IActionResult Privacy()
+    [HttpGet("/numbers")]
+    public IActionResult Numbers()
     {
-        return View();
+        List<int> numbers = new List<int>{1,2,3,4,5};
+        return View(numbers);
     }
+    [HttpGet("/user")]
+    public IActionResult User()
+    {
+        string user = "Brandon Lewis";
+        return View("User",user);
+    }
+    [HttpGet("/users")]
+    public IActionResult Users()
+    {
+        List<string> users = new List<string>{"Kylie", "des", "tevenn"};
+        return View(users);
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

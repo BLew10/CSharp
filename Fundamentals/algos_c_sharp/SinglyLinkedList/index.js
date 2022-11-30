@@ -40,6 +40,92 @@ class SinglyLinkedList {
         /** @type {ListNode|null} */
         this.head = null;
     }
+
+    /**
+    * Removes the last node of this list.
+    * - Time: O(?).
+    * - Space: O(?).
+    * @returns {any} The data from the node that was removed.
+   */
+    removeBack() {
+        if (this.head.next === null) {
+            return this.removeHead()
+        }
+        let runner = this.head;
+        let deleted = null
+        while (runner.next !== null) {
+            if (runner.next.next === null) {
+                deleted = runner.next
+                runner.next = null
+            } else {
+                runner = runner.next
+            }
+        }
+        return deleted
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @returns {boolean}
+    */
+    contains(val) {
+        let runner = this.head;
+
+        while (runner !== null) {
+            if (runner.data === val) {
+                return true
+            }
+            runner = runner.next
+        }
+        return false
+
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @param {?ListNode} current The current node during the traversal of this list
+     *    or null when the end of the list has been reached.
+     * @returns {boolean}
+    */
+    containsRecursive(val, current = this.head) {
+        if (current === null) {
+            return false
+        } else if (current.data === val) {
+            return true
+        }
+        return this.containsRecursive(val, current.next)
+    }
+
+    // EXTRA
+    /**
+     * Recursively finds the maximum integer data of the nodes in this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {ListNode} runner The start or current node during traversal, or null
+     *    when the end of the list is reached.
+     * @param {ListNode} maxNode Keeps track of the node that contains the current
+     *    max integer as it's data.
+     * @returns {?number} The max int or null if none.
+    */
+    recursiveMax(runner = this.head, maxNode = this.head) {
+        if (this.head === null) {
+            return null
+        }
+        if (runner.data > maxNode.data) {
+            maxNode = runner
+        }
+        if (runner.next === null) {
+            return maxNode.data
+        }
+        return this.recursiveMax(runner.next, maxNode)
+    }
+
     /**
  * Creates a new node with the given data and inserts that node at the front
  * of this list.
@@ -48,16 +134,16 @@ class SinglyLinkedList {
  * @param {any} data The data for the new node.
  * @returns {SinglyLinkedList} This list.
 */
-insertAtFront(data) {
-    if(this.isEmpty()){
-        this.head = new ListNode(data)
+    insertAtFront(data) {
+        if (this.isEmpty()) {
+            this.head = new ListNode(data)
+            return this
+        }
+        let newHead = new ListNode(data);
+        newHead.next = this.head;
+        this.head = newHead;
         return this
     }
-    let newHead = new ListNode(data);
-    newHead.next = this.head;
-    this.head = newHead;
-    return this
-}
 
 
     /**
@@ -66,8 +152,8 @@ insertAtFront(data) {
      * - Space: (?).
      * @returns {any} The data from the removed node.
     */
-     removeHead() {
-        if(this.isEmpty()){
+    removeHead() {
+        if (this.isEmpty()) {
             return null
         }
         let prevHead = this.head;
@@ -82,14 +168,14 @@ insertAtFront(data) {
      * - Space: (?).
      * @returns {number|NaN} The average of the node's data.
     */
-     average() {
-        if(this.isEmpty()){
+    average() {
+        if (this.isEmpty()) {
             return NaN;
         }
         let runner = this.head;
         let sum = 0;
         let count = 0;
-        while(runner){
+        while (runner) {
             sum += runner.data;
             runner = runner.next;
             count++;
@@ -193,11 +279,15 @@ const emptyList = new SinglyLinkedList();
 
 // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
 const biNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-console.log(biNodeList.average())
-console.log(biNodeList.insertAtFront(5))
-console.log(biNodeList.removeHead())
+// console.log(biNodeList.average())
+// console.log(biNodeList.insertAtFront(5))
+// console.log(biNodeList.removeHead())
 
-// const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
+const firstThreeList = new SinglyLinkedList().insertAtBackMany([]);
+
+console.log(emptyList.removeHead())
+
+
 // const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 // const unorderedList = new SinglyLinkedList().insertAtBackMany([
 //   -5, -10, 4, -3, 6, 1, -7, -2,

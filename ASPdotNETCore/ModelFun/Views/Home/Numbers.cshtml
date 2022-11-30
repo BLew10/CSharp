@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Numbers";
+}
+
+@model List<int>
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Here is a List of Numbers.</p>
+
+@foreach (var item in Model)
+{
+    <p>@item</p>
+}
+

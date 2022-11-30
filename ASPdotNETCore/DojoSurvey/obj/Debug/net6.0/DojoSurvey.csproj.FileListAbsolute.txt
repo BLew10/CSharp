@@ -21,3 +21,4 @@ C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\DojoSurvey\obj\Debug\net6.0\refi
 C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\DojoSurvey\obj\Debug\net6.0\DojoSurvey.pdb
 C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\DojoSurvey\obj\Debug\net6.0\DojoSurvey.genruntimeconfig.cache
 C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\DojoSurvey\obj\Debug\net6.0\ref\DojoSurvey.dll
+C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\DojoSurvey\bin\Debug\net6.0\Views\DojoSurvey\Properties\launchSettings.json
