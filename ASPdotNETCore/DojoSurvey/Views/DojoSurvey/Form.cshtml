@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+
+<body>
+
+    <form action="results" method="post" class="p-3 border-2 [&>*]:flex [&>*]:justify-between  [&>*]:my-3 ">
+        <div>
+            <label for="name">Name: </label><input type="text" name="Name" class="border-2 w-1/2 border-black">
+        </div>
+        <div>
+            <label for="">Location: </label>
+            <select name="Location" id=""class=" border-2 w-1/2 border-black rounded">
+                <option value="San Jose">San Jose</option>
+                <option value="Remote">Remote</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Favorite Language</label><select name="FavLang" id="" class=" border-2 w-1/2 border-black rounded">
+                <option value="C#">C#</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+        <div>
+
+            <label for="">Comment (optional): </label>
+            <textarea name="Comment" id="" cols="50" rows="5"  class="border-2 border-black"></textarea>
+        </div>
+        <a href="/results"><button class="p-3 border-2 w-1/2 border-black rounded">Submit</button></a>
+    </form>
+
+</body>
+
+</html>
