@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class="text-center">
+    <form asp-action="Submit" asp-controller="Home" method="post"
+        class="p-3 border-2 [&>*]:flex [&>*]:justify-between  [&>*]:my-3 ">
+        <div>
+            <span asp-validation-for="Name"></span>
+            <label asp-for="Name">Name: </label><input type="text" asp-for="Name" class="border-2 w-1/2 border-black">
+        </div>
+                <div>
+            <span asp-validation-for="Email"></span>
+            <label asp-for="Email">Email: </label><input type="email" asp-for="Email" class="border-2 w-1/2 border-black">
+        </div>\        <div>
+            <span asp-validation-for="Birthday"></span>
+            <label asp-for="Birthday">Birthday: </label><input type="date" asp-for="Birthday" class="border-2 w-1/2 border-black">
+        </div>\        <div>
+            <span asp-validation-for="Password"></span>
+            <label asp-for="Password">Password: </label><input type="password" asp-for="Password" class="border-2 w-1/2 border-black">
+        </div>\        <div>
+            <span asp-validation-for="OddNum"></span>
+            <label asp-for="OddNum">OddNum: </label><input type="int" asp-for="OddNum" class="border-2 w-1/2 border-black">
+        </div>
+        <button class="p-3 border-2 w-1/2 border-black rounded">Submit</button>
+    </form>
+</div>
