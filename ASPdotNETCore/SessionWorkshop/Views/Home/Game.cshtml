@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+
+
+    </ul>
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+    <h1>Total: @Context.Session.GetInt32("total")</h1>
+    <form asp-action="Operation" asp-controller="Home" method="post">
+        <input type="hidden" value="add" name ="op">
+        <button class="p-2 border-2">+1</button>
+    </form>
+    <form asp-action="Operation" asp-controller="Home" method="post">
+         <input type="hidden" value="multiply" name ="op">
+        <button class="p-2 border-2">x2</button>
+    </form>
+    <form asp-action="Operation" asp-controller="Home" method="post">
+         <input type="hidden" value="minus" name ="op">
+        <button class="p-2 border-2">-1</button>
+    </form>
+    <form asp-action="Operation" asp-controller="Home" method="post">
+         <input type="hidden" value="random" name ="op">
+        <button class="p-2 border-2">+ Random</button>
+    </form>
+
+    </p>

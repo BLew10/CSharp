@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SessionWorkshop</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SessionWorkshop.styles.css" asp-append-version="true" />
+    <script src='https://cdn.tailwindcss.com'></script>
+</head>
+
+<body>
+    <header class="flex justify-around">
+        <p>SessionWorkshop</p>
+        <ul class= "flex justify-between basis-1/3">
+            <li class="">
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index">@Context.Session.GetString("Name")</a>
+            </li>
+            @if (Context.Session.GetString("Name") != null)
+            {
+                <li class="">
+                    <a asp-area="" asp-controller="Home" asp-action="Logout">
+                        <p class="p-3 bg-red-300 rounded" >Logout</p>
+                    </a>
+                </li>
+            }
+        </ul>
+
+    </header>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="">
+        <div class="">
+            &copy; 2022 - SessionWorkshop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

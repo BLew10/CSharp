@@ -42,6 +42,100 @@ class SinglyLinkedList {
     }
 
     /**
+   * Retrieves the data of the second to last node in this list.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @returns {any} The data of the second to last node or null if there is no
+   *    second to last node.
+  */
+     secondToLast() {
+        //if list is empty or only 1
+        if (this.isEmpty() || this.head.next === null) {
+            return null;
+        }
+        //loop through the list until the 2rd to last
+        let runner = this.head;
+        while (runner.next.next) {
+            runner = runner.next
+        }
+        //return data
+        const returnData = runner.data;
+        return returnData;
+    }
+
+    /**
+     * Removes the node that has the matching given val as it's data.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The value to compare to the node's data to find the
+     *    node to be removed.
+     * @returns {boolean} Indicates if a node was removed or not.
+     * 
+     * //edge: if head is val, if last is val
+    */
+     removeVal(val) {
+        //if list is empty
+        if (this.isEmpty()) {
+            return false;
+        }
+        //if head is the val
+        if (this.head.data === val) {
+            this.removeHead();
+            return true;
+        }
+        //loop through whole list
+        let runner = this.head;
+        while (runner.next) {
+            if (runner.next.data === val) {
+                //if it's the last node
+                if (runner.next.next === null) {
+                    runner.next = null;
+                    return true;
+                }
+                runner.next = runner.next.next;
+                return true;
+            }
+            runner = runner.next;
+        }
+        return false;
+    }
+
+
+    // EXTRA
+    /**
+     * Inserts a new node before a node that has the given value as its data.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} newVal The value to use for the new node that is being added.
+     * @param {any} targetVal The value to use to find the node that the newVal
+     *    should be inserted in front of.
+     * @returns {boolean} To indicate whether the node was pre-pended or not.
+    */
+     prepend(newVal, targetVal) {
+        //if list is empty
+        if (this.isEmpty()) {
+            return false;
+        }
+        //if head is the targetVal
+        if (this.head.data === targetVal) {
+            this.insertAtFront(newVal);
+            return true;
+        }
+        const newNode = new ListNode(newVal);
+        let runner = this.head;
+        while (runner.next) {
+            if (runner.next.data === targetVal) {
+                newNode.next = runner.next;
+                runner.next = newNode;
+                return true;
+            }
+            runner = runner.next;
+        }
+        return false;
+    }
+
+
+    /**
     * Removes the last node of this list.
     * - Time: O(?).
     * - Space: O(?).

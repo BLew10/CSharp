@@ -8,37 +8,37 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FormSubmission
 build_property.RootNamespace = FormSubmission
-build_property.ProjectDir = C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\FormSubmission\
+build_property.ProjectDir = c:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\FormSubmission\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\FormSubmission
+build_property.MSBuildProjectDirectory = c:\Users\Brand\Coding Dojo\CSharp\ASPdotNETCore\FormSubmission
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Home/Form.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Home/Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Home/Success.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Home/Success.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Shared/Error.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/_ViewImports.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/_ViewStart.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Shared/_Layout.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ASPdotNETCore/FormSubmission/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-shi81r30gp
