@@ -1,7 +1,7 @@
 @model Dish
 
 <div class="text-center">
-    <h1 class>@Model.Name by @Model.Chef</h1>
+    <h1 class>@Model.Name by @Model.Chef.FirstName</h1>
     <p>@Model.Description</p>
     <p>@Model.Calories</p>
         <a asp-controller="Home" asp-route-DishId=@Model.DishId asp-action="EditDish"  >Edit</a>
