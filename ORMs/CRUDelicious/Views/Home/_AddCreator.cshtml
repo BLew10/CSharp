@@ -1,0 +1,12 @@
+@model MyViewModel
+
+<div>
+   <label>Chef</label>
+   <select asp-for="@Model.Dish.ChefId" name="ChefId">
+      @foreach (Chef chef in Model.AllChefs)
+      {
+         <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+      }
+   </select>
+
+</div>

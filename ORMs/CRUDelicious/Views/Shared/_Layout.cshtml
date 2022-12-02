@@ -9,9 +9,18 @@
     <link rel="stylesheet" href="~/CRUDelicious.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    <header class="flex justify-around w-1/2">
        <div>
         <a asp-controller="Home" asp-action="CreateDishForm">Create A Dish</a>
+       </div>
+       <div>
+        <a asp-controller="Home" asp-action="CreateChefForm">Add a Chef</a>
+       </div>
+       <div>
+        <a asp-controller="Home" asp-action="AllDishes">All Dishes</a>
+       </div>
+       <div>
+        <a asp-controller="Home" asp-action="AllChefs">All Chefs</a>
        </div>
      
     </header>

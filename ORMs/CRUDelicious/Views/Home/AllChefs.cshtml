@@ -1,0 +1,11 @@
+<h1>All Chefs</h1>
+
+@foreach (Chef c in ViewBag.AllChefs)
+{
+    <div class="w-1/2 justify-between flex">
+    <p>@c.FirstName @c.LastName</p>
+    <p>Age: @(DateTime.Now.Year-c.Birthday.Year)</p>
+    <p>@c.CreatedDishes.Count</p>
+    </div>
+    
+}

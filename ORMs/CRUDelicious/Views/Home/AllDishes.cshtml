@@ -3,12 +3,8 @@
 @foreach (Dish d in ViewBag.AllDishes)
 {
     <div class="w-1/2 justify-between flex">
-    <p>@d.Name by @d.Chef</p>
-    <a asp-controller="Home" asp-route-DishId=@d.DishId asp-action="SingleDish"  >View</a>
-    <a asp-controller="Home" asp-route-DishId=@d.DishId asp-action="EditDish"  >Edit</a>
-    <form action="dish/@d.DishId/delete" method="post">
-    <input type="submit" value="Delete">
-    </form>
+    <p>@d.Name by @d.Chef.FirstName </p>
+
     @* <a asp-controller="Home" asp-action="DeleteDish">Delete</a> *@
     </div>
     

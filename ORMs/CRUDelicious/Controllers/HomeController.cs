@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using CRUDelicious.Models;
 
 namespace CRUDelicious.Controllers;
@@ -19,15 +20,34 @@ public class HomeController : Controller
     [HttpGet("")]
     public IActionResult AllDishes()
     {
-        ViewBag.AllDishes = _context.Dishes.ToList();
+        ViewBag.AllDishes = _context.Dishes.Include(c => c.Chef).ToList();
         return View();
     }
-    [HttpGet("create")]
+
+    [HttpGet("chefs")]
+    public IActionResult AllChefs()
+    {
+        ViewBag.AllChefs = _context.Chefs.Include(dishes => dishes.CreatedDishes).ToList();
+        return View();
+    }
+    [HttpGet("dish/new")]
     public IActionResult CreateDishForm()
+    {
+        MyViewModel AllChefs = new MyViewModel
+        {
+            AllChefs = _context.Chefs.Include(d => d.CreatedDishes).ToList()
+        };
+
+        return View(AllChefs);
+    }
+
+        [HttpGet("chef/new")]
+    public IActionResult CreateChefForm()
     {
 
         return View();
     }
+
     [HttpGet("dish/{DishId}")]
     public IActionResult SingleDish(int DishId)
     {
@@ -49,6 +69,9 @@ public class HomeController : Controller
     {
         if (ModelState.IsValid)
         {
+            Console.WriteLine(newDish.ChefId);
+            Console.WriteLine(newDish.Name);
+            Console.WriteLine(newDish.Description);
             _context.Add(newDish);
             _context.SaveChanges();
             return RedirectToAction("AllDishes");
@@ -56,26 +79,48 @@ public class HomeController : Controller
 
         else
         {
-            return View("CreateDishForm");
+            MyViewModel AllChefs = new MyViewModel
+            {
+                AllChefs = _context.Chefs.ToList()
+            };
+            return View("CreateDishForm", AllChefs);
+        }
+    }
+
+        [HttpPost("chef/create")]
+    public IActionResult CreateChef(Chef newChef)
+    {
+        if (ModelState.IsValid)
+        {
+           
+            _context.Add(newChef);
+            _context.SaveChanges();
+            return RedirectToAction("AllChefs");
+        }
+
+        else
+        {
+
+            return View("CreateChefForm");
         }
     }
 
     [HttpPost("dish/{DishId}/delete")]
     public IActionResult DeleteDish(int DishId)
     {
-         Dish? DishToDelete = _context.Dishes.FirstOrDefault(d => d.DishId == DishId);
+        Dish? DishToDelete = _context.Dishes.FirstOrDefault(d => d.DishId == DishId);
 
-         _context.Dishes.Remove(DishToDelete);
+        _context.Dishes.Remove(DishToDelete);
 
-         _context.SaveChanges();
+        _context.SaveChanges();
 
         return RedirectToAction("AllDishes");
     }
 
     [HttpPost("dish/{DishId}/update")]
     public IActionResult UpdateDish(Dish updateDish, int DishId)
-    { 
-        
+    {
+
         Dish? OldDish = _context.Dishes.FirstOrDefault(d => d.DishId == DishId);
         if (ModelState.IsValid)
         {

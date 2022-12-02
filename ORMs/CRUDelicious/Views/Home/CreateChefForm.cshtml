@@ -1,0 +1,26 @@
+@model Chef
+
+<div class="text-center">
+    <h1 class=>Add A Chef</h1>
+    <form asp-action="CreateChef" class="w-1/2 mx-auto">
+        <div>
+            <span asp-validation-for="FirstName"></span>
+            <label>First Name: </label>
+            <input type="text" asp-for="FirstName" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+        <div>
+            <span asp-validation-for="LastName"></span>
+            <label>Last Name:</label>
+            <input type="number" asp-for="LastName" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+        <div>
+            <span asp-validation-for="Birthday"></span>
+            <label>Birthday</label>
+            <input type="date" asp-for="Birthday" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+
+        <button>Submit</button>
+    </form>
+
+
+</div>

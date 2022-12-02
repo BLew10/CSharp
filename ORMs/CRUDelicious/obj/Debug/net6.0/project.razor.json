@@ -16338,13 +16338,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Brand\\Coding Dojo\\CSharp\\ORMs\\CRUDelicious\\Views\\Home\\_AddCreator.cshtml",
+      "TargetPath": "Views\\Home\\_AddCreator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Brand\\Coding Dojo\\CSharp\\ORMs\\CRUDelicious\\Views\\Home\\EditDish.cshtml",
       "TargetPath": "Views\\Home\\EditDish.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Brand\\Coding Dojo\\CSharp\\ORMs\\CRUDelicious\\Views\\Home\\AllChefs.cshtml",
+      "TargetPath": "Views\\Home\\AllChefs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Brand\\Coding Dojo\\CSharp\\ORMs\\CRUDelicious\\Views\\Home\\_DishForm.cshtml",
+      "TargetPath": "Views\\Home\\_DishForm.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Brand\\Coding Dojo\\CSharp\\ORMs\\CRUDelicious\\Views\\Home\\AllDishes.cshtml",
       "TargetPath": "Views\\Home\\AllDishes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Brand\\Coding Dojo\\CSharp\\ORMs\\CRUDelicious\\Views\\Home\\CreateChefForm.cshtml",
+      "TargetPath": "Views\\Home\\CreateChefForm.cshtml",
       "FileKind": "mvc"
     }
   ],
