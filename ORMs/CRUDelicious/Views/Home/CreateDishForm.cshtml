@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Dish
+
+<div class="text-center">
+    <h1 class=>Create a Dish</h1>
+    <form asp-action="CreateDish" class="w-1/2 mx-auto">
+        <div>
+            <span asp-validation-for="Name"></span>
+            <label>Name</label>
+            <input type="text" asp-for="Name" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+        <div>
+             <span asp-validation-for="Chef"></span>
+            <label>Chef</label>
+            <input type="text" asp-for="Chef" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+        <div>
+             <span asp-validation-for="Calories"></span>
+            <label>Calories</label>
+            <input type="number" asp-for="Calories" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+        <div>
+             <span asp-validation-for="Description"></span>
+            <label>Description</label>
+            <input type="text" asp-for="Description" class="border-2 border-slate-300 rounded w-1/2">
+        </div>
+        <button>Submit</button>
+    </form>
+</div>
