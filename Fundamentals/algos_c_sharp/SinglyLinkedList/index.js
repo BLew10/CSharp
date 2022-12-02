@@ -40,6 +40,88 @@ class SinglyLinkedList {
         /** @type {ListNode|null} */
         this.head = null;
     }
+    /**
+  * Concatenates the nodes of a given list onto the back of this list.
+  * - Time: O(?).
+  * - Space: O(?).
+  * @param {SinglyLinkedList} addList An instance of a different list whose
+  *    whose nodes will be added to the back of this list.
+  * @returns {SinglyLinkedList} This list with the added nodes.
+  */
+    concat(addList) {
+        if (this.isEmpty()) {
+            return addList
+        }
+        let runner = this.head
+        while (runner.next) {
+            runner = runner.next
+        }
+        runner.next = addList.head
+        return this
+    }
+
+    splitOnVal(val) {
+        if (this.isEmpty() || val === this.head.data) {
+            return this
+        }
+        let newList = new SinglyLinkedList()
+        if(val === this.head.data){
+            newList.head = this.head
+            this.head = null
+            return newList
+        }
+        let runner = this.head
+       
+        while (runner.next) {
+            if (runner.next.data === val) {
+
+                newList.head = runner.next
+                runner.next = null
+                return newList
+            }
+            runner = runner.next
+        }
+        return null
+    }
+
+    /**
+     * Finds the node with the smallest data and moves that node to the front of
+     * this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @returns {SinglyLinkedList} This list.
+     */
+    moveMinToFront() {
+        if (this.isEmpty()) {
+            return this
+        }
+        let min = this.head.data
+        let runner = this.head
+        while (runner) {
+            if (runner.data < min) {
+                min = runner.data
+            }
+            runner = runner.next
+        }
+
+        this.removeVal(min)
+        return this.insertAtFront(min)
+
+    }
+
+    // EXTRA
+    /**
+     * Splits this list into two lists where the 2nd list starts with the node
+     * that has the given value.
+     * splitOnVal(5) for the list (1=>3=>5=>2=>4) will change list to (1=>3)
+     * and the return value will be a new list containing (5=>2=>4)
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The value in the node that the list should be split on.
+     * @returns {SinglyLinkedList} The split list containing the nodes that are
+     *    no longer in this list.
+     */
+
 
     /**
    * Retrieves the data of the second to last node in this list.
@@ -48,7 +130,7 @@ class SinglyLinkedList {
    * @returns {any} The data of the second to last node or null if there is no
    *    second to last node.
   */
-     secondToLast() {
+    secondToLast() {
         //if list is empty or only 1
         if (this.isEmpty() || this.head.next === null) {
             return null;
@@ -73,7 +155,7 @@ class SinglyLinkedList {
      * 
      * //edge: if head is val, if last is val
     */
-     removeVal(val) {
+    removeVal(val) {
         //if list is empty
         if (this.isEmpty()) {
             return false;
@@ -111,7 +193,7 @@ class SinglyLinkedList {
      *    should be inserted in front of.
      * @returns {boolean} To indicate whether the node was pre-pended or not.
     */
-     prepend(newVal, targetVal) {
+    prepend(newVal, targetVal) {
         //if list is empty
         if (this.isEmpty()) {
             return false;
@@ -346,6 +428,8 @@ class SinglyLinkedList {
         return this;
     }
 
+
+
     /**
      * Converts this list into an array containing the data of each node.
      * - Time: O(n) linear.
@@ -364,6 +448,9 @@ class SinglyLinkedList {
     }
 }
 
+
+
+
 /******************************************************************* 
  Multiple test lists already constructed to test your methods on.
 Below commented code depends on insertAtBack method to be completed,
@@ -371,15 +458,17 @@ after completing it, uncomment the code.
 */
 const emptyList = new SinglyLinkedList();
 
-// const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-const biNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2, 0]);
 // console.log(biNodeList.average())
 // console.log(biNodeList.insertAtFront(5))
 // console.log(biNodeList.removeHead())
 
-const firstThreeList = new SinglyLinkedList().insertAtBackMany([]);
+const firstThreeList = new SinglyLinkedList().insertAtBackMany([5, 7, 1, 3, 2]);
 
-console.log(emptyList.removeHead())
+console.log(emptyList.moveMinToFront().toArr())
+console.log(singleNodeList.moveMinToFront().toArr())
+console.log(biNodeList.moveMinToFront().toArr())
 
 
 // const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);

@@ -63,7 +63,6 @@ public class HomeController : Controller
     [HttpPost("dish/{DishId}/delete")]
     public IActionResult DeleteDish(int DishId)
     {
-    Console.WriteLine("DELETE****************");
          Dish? DishToDelete = _context.Dishes.FirstOrDefault(d => d.DishId == DishId);
 
          _context.Dishes.Remove(DishToDelete);
@@ -75,12 +74,12 @@ public class HomeController : Controller
 
     [HttpPost("dish/{DishId}/update")]
     public IActionResult UpdateDish(Dish updateDish, int DishId)
-    {
-        Console.WriteLine("Updating");
+    { 
+        
+        Dish? OldDish = _context.Dishes.FirstOrDefault(d => d.DishId == DishId);
         if (ModelState.IsValid)
         {
 
-            Dish? OldDish = _context.Dishes.FirstOrDefault(d => d.DishId == DishId);
             OldDish.Name = updateDish.Name;
             OldDish.Chef = updateDish.Chef;
             OldDish.Calories = updateDish.Calories;
@@ -92,7 +91,7 @@ public class HomeController : Controller
 
         else
         {
-            return View("EditDish");
+            return View("EditDish", OldDish);
         }
     }
 
