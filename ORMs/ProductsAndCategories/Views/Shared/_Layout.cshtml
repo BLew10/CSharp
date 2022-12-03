@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProductsAndCategories</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProductsAndCategories.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+       
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AllProducts">Products</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="AllCategories">Categories</a>
+            
+    </header>
+    <div class="">
+        <main role="" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="">
+        <div class="">
+            &copy; 2022 - ProductsAndCategories - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
