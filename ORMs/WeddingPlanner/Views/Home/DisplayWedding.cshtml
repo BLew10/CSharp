@@ -1,0 +1,10 @@
+@model MyViewModel
+
+<h1>@Model.Wedding.WedderOne & @Model.Wedding.WedderTwo</h1>
+
+<h1>@Model.Wedding.Date</h1>
+
+@foreach (Association guest in Model.GuestList)
+{
+    <p>@guest.User.FirstName</p>
+}

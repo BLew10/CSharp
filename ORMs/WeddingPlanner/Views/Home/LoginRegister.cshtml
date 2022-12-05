@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model MyViewModel
+
+<div class="flex w-1/2 mx-auto justify-between">
+	@await Html.PartialAsync("Login")
+	@await Html.PartialAsync("Register")
+</div>
+
+

@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@model MyViewModel
+
+
+<div class="flex flex-col border-2 black">
+    <div class="flex  border-b-2">
+        <p class="basis-1/4">Wedding Of</p>
+        <p class="basis-1/4">Date</p>
+        <p class="basis-1/4">Guest Count</p>
+        <p class="basis-1/4">Action</p>
+    </div>
+    @foreach (Wedding wedding in Model.AllWeddings)
+    {
+        int? LoggedInUserId = Context.Session.GetInt32("UserId");
+        Association? association = wedding.GuestList.FirstOrDefault(g => g.UserId == LoggedInUserId);
+
+        <div class="flex">
+            @{
+                int total = wedding.GuestList.Count + 1;
+            }
+            <a href="/wedding/@wedding.WeddingId" class="basis-1/4">@wedding.WedderOne & @wedding.WedderTwo</a>
+            <p class="basis-1/4">@wedding.Date</p>
+            <p class="basis-1/4">@total</p>
+            @if (wedding.Creator == LoggedInUserId)
+            {
+                <form action="/wedding/@wedding.WeddingId/delete" method="post">
+                    <button>Delete</button>
+                </form>
+            }
+            else if (association != null)
+            {
+                { }
+                <form action="/association/@association.AssociationId/delete" method="post">
+                    <button>UnRSVP</button>
+                </form>
+            }
+            else
+            {
+                <form action="/association/create" method="post">
+                    <input type="hidden" name="WeddingId" value="@wedding.WeddingId">
+                    <input type="hidden" name="UserId" value='@LoggedInUserId'>
+                    <button>RSVP</button>
+                </form>
+            }
+        </div>
+    }
+</div>
