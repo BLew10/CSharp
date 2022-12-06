@@ -1,0 +1,36 @@
+@model Project
+
+<div class="text-center w-1/2 mx-auto ">
+    <h1 class>Start a Project</h1>
+    <form asp-action="CreateProject" class="w-full [&>*]:flex [&>*]:justify-between ">
+
+        <span asp-validation-for="Title" class="text-red-500"></span>
+        <div>
+            <label>Title:</label>
+            <input type="text" asp-for="Title" class="border-2 border-slate-300 rounded ">
+        </div>
+
+        <span asp-validation-for="Goal" class="text-red-500"></span>
+        <div>
+            <label>Goal (in USD):</label>
+            <input type="number" asp-for="Goal" class="border-2 border-slate-300 rounded " min=1>
+        </div>
+
+        <span asp-validation-for="EndDate" class="text-red-500"></span>
+
+        <div>
+            <label>End Date: </label>
+            <input type="date" asp-for="EndDate" class="border-2 border-slate-300 rounded ">
+        </div>
+
+        <span asp-validation-for="Description" class="text-red-500"></span>
+        <div>
+            <label>Description: </label>
+            <textarea  asp-for="Description" class="border-2 border-slate-300 rounded " rows="5" cols="30"></textarea>
+        </div>
+        <input type="hidden" asp-for="UserId" value='@Context.Session.GetInt32("UserId")' >
+        <input type="hidden" asp-for="Supporters" value=0 >
+        <input type="hidden" asp-for="Total" value=0 >
+        <button>Create</button>
+    </form>
+</div>
