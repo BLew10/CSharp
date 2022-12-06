@@ -14,6 +14,7 @@
     @foreach (Wedding wedding in Model.AllWeddings)
     {
         int? LoggedInUserId = Context.Session.GetInt32("UserId");
+        //every loop i get a new association. I run it through the association to see if there exist an association between the wedding and logged in user
         Association? association = wedding.GuestList.FirstOrDefault(g => g.UserId == LoggedInUserId);
 
         <div class="flex">
@@ -31,7 +32,7 @@
             }
             else if (association != null)
             {
-                { }
+        
                 <form action="/association/@association.AssociationId/delete" method="post">
                     <button>UnRSVP</button>
                 </form>

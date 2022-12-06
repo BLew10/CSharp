@@ -17,7 +17,7 @@ public class Wedding
     [MinLength(2, ErrorMessage = "Last Name must be at least 2 characters")]        
     public string WedderTwo { get; set; }     
     
-    [Required]
+    [Required (ErrorMessage = "This is not a valid date")]
     public DateTime Date { get; set; }    
     
     [Required]

@@ -29,11 +29,13 @@ public class HomeController : Controller
         return View();
     }
 
+    [SessionCheck]
     [HttpGet("plan")]
     public IActionResult PlanWedding()
     {
         return View();
     }
+
 
     [HttpPost("user/create")]
     public IActionResult Register(User newUser)
@@ -64,10 +66,7 @@ public class HomeController : Controller
 
         if (ModelState.IsValid)
         {
-            // Association newAssociation = new Association();
-            // int? currentUserId = HttpContext.Session.GetInt32("UserId");
-            // newAssociation.UserId = currentUserId;
-            // newAssociation.WeddingId = newWedding.WeddingId;
+
             _context.Weddings.Add(newWedding);
             _context.SaveChanges();
             return Redirect($"/wedding/{newWedding.WeddingId}");
@@ -85,7 +84,7 @@ public class HomeController : Controller
     [HttpGet("weddings")]
     public IActionResult AllWeddings()
     {
-    
+
         MyViewModel AllWeddingInfo = new MyViewModel
         {
             AllWeddings = _context.Weddings.Include(a => a.GuestList).ToList(),
@@ -94,6 +93,7 @@ public class HomeController : Controller
         return View(AllWeddingInfo);
     }
 
+    [SessionCheck]
     [HttpPost("association/{AssociationId}/delete")]
     public IActionResult DeleteAssociation(int AssociationId)
     {
@@ -105,18 +105,19 @@ public class HomeController : Controller
 
         return RedirectToAction("AllWeddings");
     }
-    
+
+    [SessionCheck]
     [HttpPost("association/create")]
     public IActionResult CreateAssociation(Association newAssociation)
     {
- if (ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             _context.Associations.Add(newAssociation);
             _context.SaveChanges();
             return RedirectToAction("AllWeddings");
         }
 
-       else
+        else
         {
             return View("AllWeddings");
         }
@@ -139,6 +140,7 @@ public class HomeController : Controller
         return View(CurrentWedding);
     }
 
+    [SessionCheck]
     [HttpPost("wedding/{WeddingId}/delete")]
     public IActionResult DeleteWedding(int WeddingId)
     {
@@ -157,22 +159,22 @@ public class HomeController : Controller
         if (ModelState.IsValid)
         {
             // If initial ModelState is valid, query for a user with the provided email        
-            User? userInDb = _context.Users.FirstOrDefault(u => u.Email == userSubmission.Email);
+            User? userInDb = _context.Users.FirstOrDefault(u => u.Email == userSubmission.LogEmail);
             // If no user exists with the provided email        
             if (userInDb == null)
             {
                 // Add an error to ModelState and return to View!            
-                ModelState.AddModelError("Email", "Invalid Email/Password");
+                ModelState.AddModelError("LogEmail", "Invalid Email/Password");
                 return View("LoginRegister");
             }
             // Otherwise, we have a user, now we need to check their password                 
             // Initialize hasher object        
             PasswordHasher<LoginUser> hasher = new PasswordHasher<LoginUser>();
             // Verify provided password against hash stored in db        
-            var result = hasher.VerifyHashedPassword(userSubmission, userInDb.Password, userSubmission.Password);                                    // Result can be compared to 0 for failure        
+            var result = hasher.VerifyHashedPassword(userSubmission, userInDb.Password, userSubmission.LogPassword);                                    // Result can be compared to 0 for failure        
             if (result == 0)
             {
-                ModelState.AddModelError("Password", "Invalid Email/Password");
+                ModelState.AddModelError("LogPassword", "Invalid Email/Password");
                 return View("LoginRegister");// Handle failure (this should be similar to how "existing email" is handled)        
             }
 

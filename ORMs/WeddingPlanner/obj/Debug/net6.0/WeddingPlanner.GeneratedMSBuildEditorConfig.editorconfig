@@ -8,53 +8,53 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WeddingPlanner
 build_property.RootNamespace = WeddingPlanner
-build_property.ProjectDir = C:\Users\Brand\Coding Dojo\CSharp\ORMs\WeddingPlanner\
+build_property.ProjectDir = c:\Users\Brand\Coding Dojo\CSharp\ORMs\WeddingPlanner\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Brand\Coding Dojo\CSharp\ORMs\WeddingPlanner
+build_property.MSBuildProjectDirectory = c:\Users\Brand\Coding Dojo\CSharp\ORMs\WeddingPlanner
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/AllWeddings.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/AllWeddings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxXZWRkaW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/DisplayWedding.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/DisplayWedding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5V2VkZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/Login.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/LoginRegister.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/LoginRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpblJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/PlanWedding.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/PlanWedding.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGFuV2VkZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/Register.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Shared/Error.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/_ViewImports.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/_ViewStart.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Shared/_Layout.cshtml]
+[c:/Users/Brand/Coding Dojo/CSharp/ORMs/WeddingPlanner/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-l8pyi8tiun

@@ -1,8 +1,8 @@
 @model MyViewModel
-
+//grabs the model, name of the class and then the var in the class
 <h1>@Model.Wedding.WedderOne & @Model.Wedding.WedderTwo</h1>
 
-<h1>@Model.Wedding.Date</h1>
+<h1>@Model.Wedding.Date.ToString("MM/dd/yyyy")</h1>
 
 @foreach (Association guest in Model.GuestList)
 {
